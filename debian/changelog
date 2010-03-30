@@ -1,0 +1,5 @@
+asm58 (0.5-1) karmic; urgency=low
+
+  * Packaged for Ubuntu DKMS.
+
+ -- Not Available <none@none.net>  Tue, 30 Mar 2010 07:46:50 +0100

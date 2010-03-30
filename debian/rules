@@ -1,0 +1,14 @@
+#!/usr/bin/make -f
+# managed by CDBS
+
+include /usr/share/cdbs/1/rules/debhelper.mk
+include /usr/share/cdbs/1/rules/patchsys-quilt.mk
+#include /usr/share/cdbs/1/rules/simple-patchsys.mk
+
+DEB_INSTALL_MANPAGES_asm58-dkms="debian/asm58.8"
+DEB_DH_INSTALL_ARGS=--exclude=debian/
+
+SRC_VERSION := $(shell dpkg-parsechangelog | grep '^Version:' | cut -d' ' -f2 | cut -d- -f1 | cut -d\: -f2)
+binary-install/asm58-dkms::
+	cp $(CURDIR)/debian/dkms.conf $(CURDIR)/debian/$(cdbs_curpkg)/usr/src/asm58-$(SRC_VERSION)
+

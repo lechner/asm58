@@ -1,0 +1,10 @@
+asm58 DKMS module for Debian
+-----------------
+
+Please see ./README for a description of the asm58 software.
+
+The Debian asm58 DKMS source package provides:
+
+ * asm58-dkms, which provides the source for the kernel modules
+
+ -- Not Available <none@none.net>  Tue, 30 Mar 2010 07:46:50 +0100

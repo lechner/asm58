@@ -1,0 +1,17 @@
+Source: asm58
+Section: misc
+Priority: extra
+Maintainer: Not Available <none@none.net>
+Build-Depends: cdbs, quilt, debhelper (>= 7), linux-headers-generic
+Standards-Version: 3.8.3
+
+Package: asm58-dkms
+Architecture: all
+Depends: ${misc:Depends}, dkms (>= 1.95), bash (>> 1.99), libsensors4 (>= 3.0.2)
+Description: Asus ASM58 Mozart 2 kernel module, packaged for DKMS
+ The ASM58 Mozart 2 is a chip on many Asus motherboards that monitor
+ temperatures, fan speed and voltages.  This is the driver as module
+ for the Linux kernel.
+ .
+ This package uses DKMS to install the module and keep future kernels
+ up-to-date.
