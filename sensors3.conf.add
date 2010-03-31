@@ -1,0 +1,17 @@
+chip "asm58-*"
+# this is the default config for the asus p4b533-vm mobo--will probably be fine
+# for any but the p4s333.  see note below for p4ge-vm.
+   label   temp1   "CPU Temp"
+   label   temp2   "M/B Temp"
+   label   fan1    "CPU Fan"
+   label   fan2    "Case Fan"
+   label   in0     "VCore"
+   label   in1     "V3.3"
+   label   in2     "V5.0"
+   label   in3     "V12.0"
+
+   compute in2 ((6.8/10)+1)*@ ,  @/((6.8/10)+1)
+   compute in3 ((30/10)+1)*@  ,  @/((30/10)+1)
+# p4ge-vm reports higher CPU temp in BIOS, about 5 deg C
+   compute temp1 @+5,@-5
+

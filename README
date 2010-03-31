@@ -1,0 +1,7 @@
+This is a kernel module for the Asus ASM58 Mozart 2 that is used on many
+Asus motherboards to monitor temperatures, fan speeds and voltages.
+
+You probably also want to add the attached sensors3.conf.add to our
+/etc/sensors3.conf to obtain more meaningful results.
+
+For more information, please have a look at http://www.lm-sensors.org/.
